@@ -181,8 +181,6 @@ is tagged correctly.
 
 ### [MariaDB](/mariadb)
 
-  * [`MariaDB 10.3`](/mariadb/10.3)
-    * `ghcr.io/ptero-eggs/yolks:mariadb_10.3`
   * [`MariaDB 10.4`](/mariadb/10.4)
     * `ghcr.io/ptero-eggs/yolks:mariadb_10.4`
   * [`MariaDB 10.5`](/mariadb/10.5)
