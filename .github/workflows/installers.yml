@@ -37,5 +37,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/pelican-eggs/installers:${{ matrix.tag }}
-            ghcr.io/parkervcp/installers:${{ matrix.tag }}
+            ghcr.io/ptero-eggs/installers:${{ matrix.tag }}
