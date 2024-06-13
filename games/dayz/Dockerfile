@@ -28,6 +28,11 @@ RUN         dpkg --add-architecture i386 \
                 libnss-wrapper \
                 tini
 
+## install rcon client (bercon)
+RUN         cd /tmp/ \
+            && curl -sSL https://github.com/WoozyMasta/bercon/releases/download/1.0.0/bercon > bercon \
+            && mv bercon /usr/local/bin/
+
 ## Configure locale
 RUN         update-locale lang=en_US.UTF-8 \
             && dpkg-reconfigure --frontend noninteractive locales
