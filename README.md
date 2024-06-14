@@ -272,11 +272,11 @@ is tagged correctly.
 
 ### [Rust](/rust)
 
-* ['rust1.56'](/rust/1.56)
+* [`rust1.56`](/rust/1.56)
   * `ghcr.io/ptero-eggs/yolks:rust_1.56`
-* ['rust1.60'](/rust/1.60)
+* [`rust1.60`](/rust/1.60)
   * `ghcr.io/ptero-eggs/yolks:rust_1.60`
-* ['rust latest'](/rust/latest)
+* [`rust latest`](/rust/latest)
   * `ghcr.io/ptero-eggs/yolks:rust_latest`
 
 ### [SteamCMD](/steamcmd)
