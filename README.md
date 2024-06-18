@@ -198,8 +198,6 @@ is tagged correctly.
 
 ### [MongoDB](/mongodb)
 
-  * [`MongoDB 4`](/mongodb/4)
-    * `ghcr.io/ptero-eggs/yolks:mongodb_4`
   * [`MongoDB 5`](/mongodb/5)
     * `ghcr.io/ptero-eggs/yolks:mongodb_5`
  * [`MongoDB 6`](/mongodb/6)
