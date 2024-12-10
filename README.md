@@ -178,6 +178,10 @@ is tagged correctly.
   * `ghcr.io/ptero-eggs/yolks:java_19`
 * [`java21`](/java/21)
   * `ghcr.io/ptero-eggs/yolks:java_21`
+* [`java22`](/java/22)
+  * `ghcr.io/ptero-eggs/yolks:java_22`
+* [`java23`](/java/23)
+  * `ghcr.io/ptero-eggs/yolks:java_23`
 
 ### [MariaDB](/mariadb)
 
