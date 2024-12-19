@@ -1,6 +1,10 @@
 #!/bin/bash
 cd /home/container
 
+# Setup tty width so wine console output doesn't prematurely wrap
+stty columns 250
+
+
 # Information output
 echo "Running on Debian $(cat /etc/debian_version)"
 echo "Current timezone: $(cat /etc/timezone)"
