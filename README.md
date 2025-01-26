@@ -266,8 +266,6 @@ is tagged correctly.
 
 ### [Redis](/redis)
 
-  * [`Redis 5`](/redis/5)
-    * `ghcr.io/ptero-eggs/yolks:redis_5`
   * [`Redis 6`](/redis/6)
     * `ghcr.io/ptero-eggs/yolks:redis_6`
   * [`Redis 7`](/redis/7)
