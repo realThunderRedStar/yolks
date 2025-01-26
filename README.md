@@ -236,15 +236,6 @@ is tagged correctly.
   * `ghcr.io/ptero-eggs/yolks:nodejs_22`
   
 ### [PostgreSQL](/postgres)
-
-  * [`Postgres 9`](/postgres/9)
-    * `ghcr.io/ptero-eggs/yolks:postgres_9`
-  * [`Postgres 10`](/postgres/10)
-    * `ghcr.io/ptero-eggs/yolks:postgres_10`
-  * [`Postgres 11`](/postgres/11)
-    * `ghcr.io/ptero-eggs/yolks:postgres_11`
-  * [`Postgres 12`](/postgres/12)
-    * `ghcr.io/ptero-eggs/yolks:postgres_12`
   * [`Postgres 13`](/postgres/13)
     * `ghcr.io/ptero-eggs/yolks:postgres_13`
   * [`Postgres 14`](/postgres/14)
