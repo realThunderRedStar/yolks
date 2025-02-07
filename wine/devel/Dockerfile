@@ -24,7 +24,7 @@ RUN             apt update
 RUN             apt install --install-recommends winehq-devel cabextract wine-binfmt -y
 
 # Set up Winetricks
-RUN	            wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/b7cf27d70af3dc5ddbd6cd604206d1f932a7f702/src/winetricks \
+RUN	            wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/d4a3cb0de8708a9b122db3fc4d5a53ab130d81ad/src/winetricks \
                 && chmod +x /usr/sbin/winetricks
 
 ENV             HOME=/home/container
