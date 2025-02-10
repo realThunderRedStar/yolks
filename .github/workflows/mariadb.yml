@@ -17,13 +17,11 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - '10.4'
           - '10.5'
           - '10.6'
-          - '10.7'
-          - '11.2'
-          - '11.3'
+          - '10.11'
           - '11.4'
+          - '11.6'
     steps:
       - uses: actions/checkout@v4
       - uses: docker/setup-qemu-action@v3

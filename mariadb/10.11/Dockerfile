@@ -8,7 +8,7 @@
 #
 # ---------------------------------------------------------
 
-	FROM        --platform=$TARGETOS/$TARGETARCH mariadb:10.7
+	FROM        --platform=$TARGETOS/$TARGETARCH mariadb:10.11
 
 	LABEL       author="Daniel Barton" maintainer="danielb@purpleflaghosting.com"
 
