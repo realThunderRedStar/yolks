@@ -27,7 +27,7 @@ RUN         dbus-uuidgen --ensure
 RUN        pipx install protontricks
 
 # Set up Winetricks
-RUN	        wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/d4a3cb0de8708a9b122db3fc4d5a53ab130d81ad/src/winetricks \
+RUN	        wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \
             && chmod +x /usr/sbin/winetricks
 
 ## install rcon
@@ -35,7 +35,7 @@ RUN         cd /tmp/ \
             && curl -sSL https://github.com/gorcon/rcon-cli/releases/download/v0.10.3/rcon-0.10.3-amd64_linux.tar.gz > rcon.tar.gz \
             && tar xvf rcon.tar.gz \
             && mv rcon-0.10.3-amd64_linux/rcon /usr/local/bin/
-
+            
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
