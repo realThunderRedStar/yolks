@@ -32,6 +32,7 @@ RUN         apk add --update --no-cache ca-certificates tzdata \
 
 USER        container
 ENV         USER=container HOME=/home/container
+ENV         GOMODCACHE=/home/container/.go-modcache
 WORKDIR     /home/container
 
 COPY		--chmod=755 --chown=root:root ../entrypoint.sh /entrypoint.sh
