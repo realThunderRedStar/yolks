@@ -38,6 +38,10 @@ envsubst < /passwd.template > ${NSS_WRAPPER_PASSWD}
 
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libnss_wrapper.so
 
+# Trap SIGINT and rethrow it as SIGTERM to ensure compatibility with existing
+# eggs startup command after wings signal handling is fixed.
+trap 'trap - SIGINT && kill -SIGTERM $$' SIGINT
+
 # Replace Startup Variables
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
 echo -e ":/home/container$ ${MODIFIED_STARTUP}"

@@ -14,7 +14,7 @@ RUN         dpkg --add-architecture i386 \
             && apt upgrade -y \
 			&& apt install -y libcurl4-gnutls-dev:i386 libssl3:i386 libcurl4:i386 lib32tinfo6 libtinfo6:i386 lib32z1 lib32stdc++6 libncurses5:i386 libcurl3-gnutls:i386 libsdl2-2.0-0:i386 \
  				gcc g++ libgcc1 libc++-dev gdb libc6 curl tar iproute2 net-tools libatomic1 libsdl1.2debian libsdl2-2.0-0 tzdata \
-        		libfontconfig locales libcurl3-gnutls libpulse-dev libpulse0 libnss-wrapper gettext tini
+        		libfontconfig locales libcurl3-gnutls libpulse-dev libpulse0 libnss-wrapper gettext
 
 ## configure locale
 RUN   update-locale lang=en_US.UTF-8 \
@@ -34,9 +34,6 @@ RUN         touch ${NSS_WRAPPER_PASSWD} ${NSS_WRAPPER_GROUP} \
 ADD         passwd.template /passwd.template
 
 
-STOPSIGNAL SIGINT
-
 COPY        --chmod=755 --chown=root:root ./entrypoint.sh /entrypoint.sh
 RUN         chmod +x /entrypoint.sh
-ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
-CMD         ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
