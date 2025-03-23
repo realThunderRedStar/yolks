@@ -8,30 +8,25 @@
 #
 # ---------------------------------------------------------
 
-	FROM        --platform=$TARGETOS/$TARGETARCH mariadb:10.11
+FROM        --platform=$TARGETOS/$TARGETARCH mariadb:10.11
 
-	LABEL       author="Daniel Barton" maintainer="danielb@purpleflaghosting.com"
+LABEL       author="Daniel Barton" maintainer="danielb@purpleflaghosting.com"
 
-	ENV         DEBIAN_FRONTEND noninteractive
+ENV         DEBIAN_FRONTEND=noninteractive
 
-	RUN         apt update -y && apt install -y libnss-wrapper gettext-base
-	RUN 		useradd -d /home/container -m container -s /bin/bash
-
-
-
-	## Prepare NSS Wrapper for the entrypoint
-	ENV         NSS_WRAPPER_PASSWD=/tmp/passwd NSS_WRAPPER_GROUP=/tmp/group
-	RUN         touch ${NSS_WRAPPER_PASSWD} ${NSS_WRAPPER_GROUP} \
-				&& chgrp 0 ${NSS_WRAPPER_PASSWD} ${NSS_WRAPPER_GROUP} \
-				&& chmod g+rw ${NSS_WRAPPER_PASSWD} ${NSS_WRAPPER_GROUP}
-	ADD         nss/passwd.template /passwd.template
-	ADD         nss/group.template /group.template
+RUN         apt update -y && apt install -y libnss-wrapper gettext-base
+RUN 		useradd -d /home/container -m container -s /bin/bash
 
 
-	USER        container
-	ENV         USER=container HOME=/home/container
-	WORKDIR     /home/container
+## Prepare NSS Wrapper for the entrypoint
+ENV         NSS_WRAPPER_PASSWD=/tmp/passwd NSS_WRAPPER_GROUP=/tmp/group
+COPY		--chown=root:root --chmod=644 nss/passwd.template nss/group.template /
 
 
-	COPY 		--chmod=755 ../entrypoint.sh /entrypoint.sh
-	ENTRYPOINT ["/entrypoint.sh"]
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+
+COPY		--chown=root:root --chmod=755 ../entrypoint.sh /entrypoint.sh
+ENTRYPOINT	["/entrypoint.sh"]
