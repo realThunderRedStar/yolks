@@ -295,8 +295,11 @@ is tagged correctly.
   * `ghcr.io/ptero-eggs/steamcmd:proton_8`
 * [`SteamCMD Sniper latest`](/steamcmd/sniper)
   * `ghcr.io/ptero-eggs/steamcmd:sniper`
-* [`SteamCMD Ubuntu latest LTS`](/steamcmd/ubuntu)
+* [`SteamCMD Ubuntu 22.04 LTS`](/steamcmd/ubuntu)
   * `ghcr.io/ptero-eggs/steamcmd:ubuntu`
+* [`SteamCMD Ubuntu 24.04 LTS`](/steamcmd/ubuntu2404)
+  * `ghcr.io/ptero-eggs/steamcmd:ubuntu2404`
+
 
 ### [Voice](/voice)
 * [`Mumble`](/voice/mumble)
