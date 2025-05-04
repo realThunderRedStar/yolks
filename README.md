@@ -165,6 +165,10 @@ is tagged correctly.
   * `ghcr.io/ptero-eggs/yolks:go_1.21`
 * [`go1.22`](/go/1.22)
   * `ghcr.io/ptero-eggs/yolks:go_1.22`
+* [`go1.23`](/go/1.23)
+  * `ghcr.io/ptero-eggs/yolks:go_1.23`
+* [`go1.24`](/go/1.24)
+  * `ghcr.io/ptero-eggs/yolks:go_1.24`
 
 ### [Java](/java)
 
