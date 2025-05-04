@@ -193,31 +193,27 @@ is tagged correctly.
 
 ### [MariaDB](/mariadb)
 
-  * [`MariaDB 10.4`](/mariadb/10.4)
-    * `ghcr.io/ptero-eggs/yolks:mariadb_10.4`
-  * [`MariaDB 10.5`](/mariadb/10.5)
-    * `ghcr.io/ptero-eggs/yolks:mariadb_10.5`
-  * [`MariaDB 10.6`](/mariadb/10.6)
-    * `ghcr.io/ptero-eggs/yolks:mariadb_10.6`
-  * [`MariaDB 10.7`](/mariadb/10.7)
-    * `ghcr.io/ptero-eggs/yolks:mariadb_10.7`
-  * [`MariaDB 11.2`](/mariadb/11.2)
-    * `ghcr.io/ptero-eggs/yolks:mariadb_11.2`
-  * [`MariaDB 11.3`](/mariadb/11.3)
-    * `ghcr.io/ptero-eggs/yolks:mariadb_11.3`
-  * [`MariaDB 11.4`](/mariadb/11.4)
-    * `ghcr.io/ptero-eggs/yolks:mariadb_11.4`
+* [`MariaDB 10.5`](/mariadb/10.5)
+  * `ghcr.io/ptero-eggs/yolks:mariadb_10.5`
+* [`MariaDB 10.6`](/mariadb/10.6)
+  * `ghcr.io/ptero-eggs/yolks:mariadb_10.6`
+* [`MariaDB 10.11`](/mariadb/10.11)
+  * `ghcr.io/ptero-eggs/yolks:mariadb_10.11`
+* [`MariaDB 11.4`](/mariadb/11.4)
+  * `ghcr.io/ptero-eggs/yolks:mariadb_11.4`
+* [`MariaDB 11.6`](/mariadb/11.6)
+  * `ghcr.io/ptero-eggs/yolks:mariadb_11.6`
 
 ### [MongoDB](/mongodb)
 
-  * [`MongoDB 5`](/mongodb/5)
-    * `ghcr.io/ptero-eggs/yolks:mongodb_5`
- * [`MongoDB 6`](/mongodb/6)
-    * `ghcr.io/ptero-eggs/yolks:mongodb_6`    
- * [`MongoDB 7`](/mongodb/7)
-    * `ghcr.io/ptero-eggs/yolks:mongodb_7`
- * [`MongoDB 8`](/mongodb/8)
-    * `ghcr.io/ptero-eggs/yolks:mongodb_8`
+* [`MongoDB 5`](/mongodb/5)
+* `ghcr.io/ptero-eggs/yolks:mongodb_5`
+* [`MongoDB 6`](/mongodb/6)
+* `ghcr.io/ptero-eggs/yolks:mongodb_6`    
+* [`MongoDB 7`](/mongodb/7)
+* `ghcr.io/ptero-eggs/yolks:mongodb_7`
+* [`MongoDB 8`](/mongodb/8)
+* `ghcr.io/ptero-eggs/yolks:mongodb_8`
 
 ### [Mono](/mono)
 
