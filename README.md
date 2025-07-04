@@ -203,6 +203,8 @@ is tagged correctly.
   * `ghcr.io/ptero-eggs/yolks:mariadb_11.4`
 * [`MariaDB 11.6`](/mariadb/11.6)
   * `ghcr.io/ptero-eggs/yolks:mariadb_11.6`
+* [`MariaDB 11.8`](/mariadb/11.8)
+  * `ghcr.io/ptero-eggs/yolks:mariadb_11.8`
 
 ### [MongoDB](/mongodb)
 
