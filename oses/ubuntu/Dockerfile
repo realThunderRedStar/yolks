@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1.4
 FROM  --platform=$TARGETOS/$TARGETARCH ubuntu:24.04
 
 LABEL author="Michael Parker" maintainer="parker@pterodactyl.io"
