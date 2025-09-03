@@ -1,31 +1,84 @@
-FROM  --platform=$TARGETOS/$TARGETARCH ubuntu:22.04
+FROM  --platform=$TARGETOS/$TARGETARCH ubuntu:24.04
 
 LABEL author="Michael Parker" maintainer="parker@pterodactyl.io"
 
-ENV   DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 ## add container user
 RUN   useradd -m -d /home/container -s /bin/bash container
 
-## update base packages
-RUN   apt update \
-        &&   apt upgrade -y
+# Setup apt
+RUN	--mount=type=cache,target=/var/cache/apt \
+	--mount=type=cache,target=/var/lib/apt \
+	apt update && apt upgrade -y
 
-## install dependencies
-RUN   apt install -y gcc g++ libgcc1 libc++-dev gdb libc6 git wget curl tar zip unzip binutils xz-utils liblzo2-2 cabextract iproute2 net-tools netcat telnet libatomic1 libsdl1.2debian libsdl2-2.0-0 \
-        libfontconfig icu-devtools libunwind8 sqlite3 libsqlite3-dev libzip4 locales ffmpeg apt-transport-https init-system-helpers \
-        libcurl3-gnutls liblua5.1-0 libluajit-5.1-2 libsqlite3-0 bzip2 zlib1g libevent-dev libmariadb-dev-compat libmariadb-dev libssl-dev \
-		libfluidsynth-dev libmariadb-dev libicu-dev libssl3 libduktape207 libjsoncpp-dev libleveldb1d libncurses5 libncursesw5 tini 
+# Install dependencies
+RUN	--mount=type=cache,target=/var/cache/apt \
+	--mount=type=cache,target=/var/lib/apt \
+    apt install -y \
+    apt-transport-https \
+    binutils \
+    bzip2 \
+    cabextract \
+    curl \
+    ffmpeg \
+    g++ \
+    gcc \
+    gdb \
+    git \
+    icu-devtools \
+    init-system-helpers \
+    iproute2 \
+    libatomic1 \
+    libc++-dev \
+    libc6 \
+    libcurl3t64-gnutls \
+    libduktape207 \
+    libevent-dev \
+    libfluidsynth-dev \
+    libfontconfig1 \
+    libgcc-s1 \
+    libicu-dev \
+    libjsoncpp-dev \
+    libleveldb1d \
+    liblzo2-2 \
+    liblua5.1-0 \
+    libluajit-5.1-2 \
+    libmariadb-dev \
+    libmariadb-dev-compat \
+    libncurses6 \
+    libncursesw6 \
+    libsdl1.2debian \
+    libsdl2-2.0-0 \
+    libsqlite3-0 \
+    libsqlite3-dev \
+    libssl-dev \
+    libssl3t64 \
+    libunwind8 \
+    libzip4t64 \
+    locales \
+    net-tools \
+    netcat-traditional \
+    sqlite3 \
+    tar \
+    telnet \
+    tini \
+    unzip \
+    wget \
+    xz-utils \
+    zip \
+    zlib1g
+
 
 ## configure locale
 RUN   update-locale lang=en_US.UTF-8 \
-        &&   dpkg-reconfigure --frontend noninteractive locales
+		&&   dpkg-reconfigure --frontend noninteractive locales
 
 WORKDIR /home/container
 
 STOPSIGNAL SIGINT
 
-COPY        --chown=container:container ./entrypoint.sh /entrypoint.sh
+COPY        --chmod=755 --chown=root:root ../entrypoint.sh /entrypoint.sh
 RUN         chmod +x /entrypoint.sh
 ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
 CMD         ["/entrypoint.sh"]
