@@ -9,14 +9,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN   useradd -m -d /home/container -s /bin/bash container
 
 # Setup apt
-RUN	--mount=type=cache,target=/var/cache/apt \
-	--mount=type=cache,target=/var/lib/apt \
-	apt update && apt upgrade -y
+RUN apt update && apt upgrade -y
+
 
 # Install dependencies
-RUN	--mount=type=cache,target=/var/cache/apt \
-	--mount=type=cache,target=/var/lib/apt \
-    apt install -y \
+RUN	apt install -y \
     apt-transport-https \
     binutils \
     bzip2 \
