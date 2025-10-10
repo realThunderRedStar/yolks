@@ -14,6 +14,7 @@
 FROM        mariadb:12.0
 
 LABEL		org.opencontainers.image.title="MariaDB 12.0"
+LABEL		org.opencontainers.image.description="Pterodactyl Yolk for MariaDB 12.0"
 LABEL		org.opencontainers.image.authors="Daniel Barton <danielb@purpleflaghosting.com>"
 LABEL		org.opencontainers.image.source="https://github.com/Ptero-Eggs/yolks"
 LABEL		org.opencontainers.image.license="MIT"
