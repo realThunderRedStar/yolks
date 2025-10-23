@@ -1,20 +1,34 @@
-FROM        --platform=$TARGETOS/$TARGETARCH node:24-bookworm-slim
+FROM        node:24-trixie-slim
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+RUN			apt-get update && apt-get install -y --no-install-recommends \
+	build-essential \
+	ca-certificates \
+	curl \
+	dnsutils \
+	ffmpeg \
+	git \
+	iproute2 \
+	iputils-ping \
+	libnss3 \
+	libsqlite3-dev \
+	libtool \
+	python3 \
+	python3-dev \
+	sqlite3 \
+	tar \
+	tini \
+	tzdata \
+	zip \
+	&& rm -rf /var/lib/apt/lists/*
 
-RUN         apt update \
-            && apt -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool iputils-ping libnss3 tini \
-            && useradd -m -d /home/container container
+RUN       	npm install --global npm@latest typescript ts-node @types/node
 
-RUN         npm install --global npm@latest typescript ts-node @types/node
-
-USER        container
-ENV         USER=container HOME=/home/container
+ENV         USER=container
+ENV			HOME=/home/container
 WORKDIR     /home/container
 
-STOPSIGNAL SIGINT
+STOPSIGNAL	SIGINT
 
-COPY        --chown=container:container ./../entrypoint.sh /entrypoint.sh
-RUN         chmod +x /entrypoint.sh
-ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
-CMD         ["/entrypoint.sh"]
+COPY        --chown=root:root --chmod=755 ./../entrypoint.sh /entrypoint.sh
+ENTRYPOINT	["/usr/bin/tini", "-g", "--"]
+CMD			["/entrypoint.sh"]
