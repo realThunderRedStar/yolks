@@ -249,7 +249,9 @@ is tagged correctly.
 * [`node23`](/nodejs/23)
   * `ghcr.io/ptero-eggs/yolks:nodejs_23`
 * [`node24`](/nodejs/24)
-  * `ghcr.io/ptero-eggs/yolks:nodejs_24` 
+  * `ghcr.io/ptero-eggs/yolks:nodejs_24`
+* [`node25`](/nodejs/25)
+  * `ghcr.io/ptero-eggs/yolks:nodejs_25`
 
 ### [PostgreSQL](/postgres)
   * [`Postgres 13`](/postgres/13)
@@ -277,8 +279,10 @@ is tagged correctly.
   * `ghcr.io/ptero-eggs/yolks:python_3.11`
 * [`python3.12`](/python/3.12)
   * `ghcr.io/ptero-eggs/yolks:python_3.12`
-* [`python3.12`](/python/3.13)
+* [`python3.13`](/python/3.13)
   * `ghcr.io/ptero-eggs/yolks:python_3.13`
+* [`python3.14`](/python/3.14)
+  * `ghcr.io/ptero-eggs/yolks:python_3.14`
 
 ### [Redis](/redis)
 
