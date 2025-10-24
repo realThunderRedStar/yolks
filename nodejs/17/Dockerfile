@@ -13,6 +13,7 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 STOPSIGNAL SIGINT
+ENV			YOLK_EOL_NAG_WARNING=1
 
 COPY        --chown=container:container ./../entrypoint.sh /entrypoint.sh
 RUN         chmod +x /entrypoint.sh
