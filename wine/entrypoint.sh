@@ -7,7 +7,6 @@ stty columns 250
 
 # Information output
 echo "Running on Debian $(cat /etc/debian_version)"
-echo "Current timezone: $(cat /etc/timezone)"
 wine --version
 
 # Make internal Docker IP address available to processes.
@@ -26,7 +25,7 @@ else
 fi
 
 ## if auto_update is not set or to 1 update
-if [ -z ${AUTO_UPDATE} ] || [ "${AUTO_UPDATE}" == "1" ]; then 
+if [ -z ${AUTO_UPDATE} ] || [ "${AUTO_UPDATE}" == "1" ]; then
     # Update Source Server
     if [ ! -z ${SRCDS_APPID} ]; then
 	    if [ "${STEAM_USER}" == "anonymous" ]; then
