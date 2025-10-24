@@ -32,6 +32,8 @@ is tagged correctly.
   * `ghcr.io/ptero-eggs/yolks:alpine`
 * [debian](/oses/debian)
   * `ghcr.io/ptero-eggs/yolks:debian`
+* [debian_trixie](/oses/debian_trixie)
+  * `ghcr.io/ptero-eggs/yolks:debian_trixie`
 * [ubuntu](/oses/ubuntu)
   * `ghcr.io/ptero-eggs/yolks:ubuntu`
 
